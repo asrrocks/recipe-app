@@ -70,7 +70,7 @@ html {
 .SearchContainer{
   width: 30%;
   margin: 50px auto 0px auto;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.6);
+  /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.6); */
 }
 .SearchContainer .INPUTSEARCH{
   background-color: transparent;
