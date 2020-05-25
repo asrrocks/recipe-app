@@ -2,18 +2,21 @@
   text-align: center;
 }
 @import url('https://fonts.googleapis.com/css2?family=Cousine&family=Krona+One&display=swap');
-.body{
+body{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  /* background-color: #eee!important; */
 }
 body::-webkit-scrollbar{
   display: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .header{
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: url('./assets/bg.jpg') no-repeat;
   background-size: cover;
@@ -21,7 +24,8 @@ body::-webkit-scrollbar{
   background-color: rgba(0, 0, 0, 0.47);
   background-blend-mode: overlay;
   text-align: center;
-  color: #fff;
+  /* color: #fff; */
+  color: rgb(233, 93, 0);
 }
 .textContainer{
   position: absolute;
@@ -40,6 +44,7 @@ body::-webkit-scrollbar{
   font-size: 1.6rem;
   letter-spacing: 2px;
   margin-top: 20px;
+  color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 }
 .redColor{
@@ -69,16 +74,19 @@ body::-webkit-scrollbar{
 }
 .SearchContainer .INPUTSEARCH{
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #fff!important;
   border-radius: 20px;
   padding: 25px;
   color: #fff;
   border-right-width: 0px!important;
 }
-.SearchContainer .INPUTSEARCH:focus,.SearchContainer .INPUTSEARCH:active {
+.SearchContainer .INPUTSEARCH:focus {
   background-color: transparent!important;
-  border: 2px solid #fff!important;
+  border: none;
   color: #fff!important;
+  outline-width: 0!important;
+  outline: none!important;
+  outline-color: #fff!important;
 }
 ::placeholder{
   color: #eee!important;
@@ -95,4 +103,101 @@ body::-webkit-scrollbar{
   color: #fff!important;
   border: 2px solid #fff!important;
   border-radius: 0px 10px 10px 0px!important;
+  outline: none;
 }
+
+/* Recipe Card */
+.RecipeContainer{
+  padding-top: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+.RecipeContainer .RecipeCardIndiv{
+  margin-bottom: 40px;
+  /* padding: 20px; */
+  /* border: 1px solid #111; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.6);
+}
+.cardTitle{
+  /* font-family: 'Krona One', sans-serif; */
+  font-family: 'Cousine', monospace;
+  /* font-size: 1.3rem!important; */
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+.cardContent{
+  font-family: 'Cousine', monospace;
+  text-align: left;
+  
+}
+.readHeader{
+  padding: 5px;
+
+}
+.BTNreadHeader{
+  border-radius: 30px!important;
+  background-color: rgb(233, 93, 0)!important;
+  border: 2px solid rgb(233, 93, 0)!important;
+  outline: none!important;
+}
+.BTNreadHeader:hover{
+  background-color: #fff!important;
+  color: rgb(233, 93, 0)!important;
+
+}
+.readBody{
+  margin-top: 10px;
+  background-color: #333!important;
+  color: #ddd;
+}
+.MainContainerDrop{
+  background-color: #111!important;
+}
+
+/* Responsive */
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .header{
+    overflow: hidden;
+  }
+
+  .textContainer h1{
+    font-size: 3rem;
+  }
+  .textContainer h5{
+    font-size: 0.9rem;
+  }
+  .socialMediaContainer a{
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+  .SearchContainer{
+    width: 90%;
+  }
+  .SearchContainer .INPUTSEARCH{
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .SearchContainer .BTNSearch{
+    font-size: 0.9rem;
+  }
+  .RecipeContainer .RecipeCardIndiv{
+    width: 100%;
+  }
+  .cardTitle{
+    font-size: 1rem!important;
+  }
+  .readBody, .BTNreadHeader{
+    font-size: 0.9rem!important;
+  }
+}
+
+/* Responsive Ends */
